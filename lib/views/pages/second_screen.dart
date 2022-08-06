@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class SecondScreen extends StatelessWidget {
-  const SecondScreen({Key? key}) : super(key: key);
+  final String value;
+  const SecondScreen({Key? key, required this.value}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,10 +13,6 @@ class SecondScreen extends StatelessWidget {
           padding: const EdgeInsets.all(15.0),
           child: Column(
             children: [
-              Image.asset("assets/images/logo.png",
-                height: 200,
-                width: 200,
-                ),
               Text("Create a new account",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -35,7 +32,7 @@ class SecondScreen extends StatelessWidget {
             TextField(
               decoration: InputDecoration(
                 labelText: "Email",
-                hintText: "Enter your email",
+                hintText: "Email",
                 border: OutlineInputBorder(),
               ),
             ),
@@ -43,7 +40,7 @@ class SecondScreen extends StatelessWidget {
             TextField(
               decoration: InputDecoration(
                 labelText: "Address",
-                hintText: "Enter your address",
+                hintText: "Address",
                 border: OutlineInputBorder(),
               ),
             ),
@@ -51,7 +48,7 @@ class SecondScreen extends StatelessWidget {
             TextField(
               decoration: InputDecoration(
                 labelText: "Phone No.",
-                hintText: "Enter your phone number",
+                hintText: "Phone No.",
                 border: OutlineInputBorder(),
               ),
             ),
@@ -60,7 +57,7 @@ class SecondScreen extends StatelessWidget {
               obscureText: true,
               decoration: InputDecoration(
                 labelText: "Password",
-                hintText: "Enter the password",
+                hintText: "Password",
                 border: OutlineInputBorder(),
               ),
             ),
